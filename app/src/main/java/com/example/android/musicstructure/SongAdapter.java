@@ -1,11 +1,13 @@
 package com.example.android.musicstructure;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -43,10 +45,21 @@ public class SongAdapter extends ArrayAdapter<Song> {
         songIndexTextView.setText(currentSong.getSongName());
 
         // Find the TextView in the song_item.xml layout with the ID artist_name
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.artist_name);
+        TextView artistNameTextView = (TextView) listItemView.findViewById(R.id.artist_name);
         // Get the version number from the current Song object and
         // set this text on the Artist Name TextView
-        defaultTextView.setText(currentSong.getArtistName());
+        artistNameTextView.setText(currentSong.getArtistName());
+
+        // Get the LinearLayout to set the OnClickListener for the song
+        LinearLayout songLayout = (LinearLayout) listItemView.findViewById(R.id.song_layout);
+        // Set the OnClick listener for the  LinearLayout
+        songLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent nowPlayingIntent = new Intent(getContext(), NowPlayingActivity.class);
+                getContext().startActivity(nowPlayingIntent);
+            }
+        });
 
         // Return the whole list item layout
         // so that it can be shown in the ListView

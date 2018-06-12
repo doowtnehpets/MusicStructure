@@ -36,7 +36,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
         }
 
         // Get the {@link Song} object located at this position in the list
-        Song currentSong = getItem(position);
+        final Song currentSong = getItem(position);
 
         // Find the TextView in the song_item.xml layout with the ID song_name
         TextView songIndexTextView = (TextView) listItemView.findViewById(R.id.song_name);
@@ -57,6 +57,8 @@ public class SongAdapter extends ArrayAdapter<Song> {
             @Override
             public void onClick(View view) {
                 Intent nowPlayingIntent = new Intent(getContext(), NowPlayingActivity.class);
+                nowPlayingIntent.putExtra("SONG_NAME", currentSong.getSongName());
+                nowPlayingIntent.putExtra("ARTIST_NAME", currentSong.getArtistName());
                 getContext().startActivity(nowPlayingIntent);
             }
         });

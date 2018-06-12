@@ -3,17 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context="com.example.android.musicstructure.NowPlayingActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/now_playing_song_name" />
+        android:orientation="vertical"
+        android:padding="8dp">
 
-    <TextView
+        <TextView
+            android:id="@+id/now_playing_song_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextViewDark"
+            tools:text="now_playing_song_name" />
+
+        <TextView
+            android:id="@+id/now_playing_artist_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/TextViewDark"
+            tools:text="now_playing_artist_name" />
+
+    </LinearLayout>
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/now_playing_artist_name"/>
+        android:layout_height="350dp"
+        android:background="@color/colorPrimary"
+        android:padding="32dp"
+        android:src="@drawable/music_note" />
 
 </LinearLayout>

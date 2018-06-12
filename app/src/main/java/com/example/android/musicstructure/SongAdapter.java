@@ -57,6 +57,7 @@ public class SongAdapter extends ArrayAdapter<Song> {
             @Override
             public void onClick(View view) {
                 Intent nowPlayingIntent = new Intent(getContext(), NowPlayingActivity.class);
+                // Add the song name and artist name to the intent sent to NowPlayingActivity
                 nowPlayingIntent.putExtra("SONG_NAME", currentSong.getSongName());
                 nowPlayingIntent.putExtra("ARTIST_NAME", currentSong.getArtistName());
                 getContext().startActivity(nowPlayingIntent);

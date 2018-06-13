@@ -3,4 +3,6 @@
     <string name="songs_label">Songs</string>
     <string name="now_playing_label">Now Playing</string>
     <string name="songs_header">Songs</string>
+    <string name="now_playing_start_time">1:00</string>
+    <string name="now_playing_end_time">5:36</string>
 </resources>

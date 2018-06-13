@@ -5,9 +5,11 @@
     android:layout_height="match_parent"
     android:background="@android:color/white"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     tools:context="com.example.android.musicstructure.NowPlayingActivity">
 
+    <!-- Track and Artist Name -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,11 +32,77 @@
 
     </LinearLayout>
 
+    <!-- Music picture -->
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:background="@color/colorPrimary"
         android:padding="32dp"
         android:src="@drawable/music_note" />
+
+    <!-- Seek bar for music progress -->
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progress="20" />
+
+
+    <!-- Time stamp, current and total time -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1:00" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5:36" />
+
+    </LinearLayout>
+
+    <!-- Music control buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="8dp">
+
+        <ImageButton
+            style="@android:style/Widget.Holo.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@android:drawable/ic_media_previous" />
+
+        <ImageButton
+            style="@android:style/Widget.Holo.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@android:drawable/ic_media_play" />
+
+        <ImageButton
+            style="@android:style/Widget.Holo.ImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:src="@android:drawable/ic_media_next" />
+
+    </LinearLayout>
 
 </LinearLayout>

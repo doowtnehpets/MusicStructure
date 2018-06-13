@@ -5,7 +5,7 @@ package com.example.android.musicstructure;
  */
 public class Song {
 
-    // Not displayed anywhere, just used as a reference point for certain things
+    // Not displayed anywhere, just used as a reference for future implementation
     private int songIndex;
 
     // The song name of course

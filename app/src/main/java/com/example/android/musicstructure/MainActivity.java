@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
         // Create a new BufferedReader to read the songs.csv file
         BufferedReader reader =  new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
 
-        // Loop through the lines of the CSV and add a new song for each line
+        // Loop through the lines of the CSV and add a new song for each line to the list of songs
         String line = "";
         try {
-            // Skip over headers
+            // Skip over the header of the CSV file
             reader.readLine();
 
             while( (line = reader.readLine()) != null ){

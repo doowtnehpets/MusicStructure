@@ -14,6 +14,7 @@ public class Song {
     // The artist of the song
     private String artistName;
 
+    // Constructor method, stores everything in its right place
     public Song(int songIndex, String songName, String artistName) {
         this.songIndex = songIndex;
         this.songName = songName;
@@ -44,6 +45,7 @@ public class Song {
         this.artistName = artistName;
     }
 
+    // toString method used in the MainActivity for logging what was loaded from the CSV file
     @Override
     public String toString() {
         return "Song{" +

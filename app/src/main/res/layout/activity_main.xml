@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+    <!-- Songs title bar -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -15,6 +17,7 @@
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <!-- The list of songs -->
     <ListView
         android:id="@+id/songs_list"
         android:layout_width="match_parent"

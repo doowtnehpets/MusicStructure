@@ -20,6 +20,7 @@
             android:id="@+id/now_playing_song_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:theme="@style/TextViewDark"
             tools:text="now_playing_song_name" />
 
@@ -45,6 +46,7 @@
     <SeekBar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:progress="20" />
 
 
